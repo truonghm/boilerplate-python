@@ -36,14 +36,14 @@ fi
 bash "$FILE" -b -p $HOME/miniconda3
 ```
 
-### Mamba
+<!-- ### Mamba
 
 From [mamba-forge](https://github.com/conda-forge/miniforge#mambaforge):
 
 ```
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
 bash Mambaforge-$(uname)-$(uname -m).sh
-```
+``` -->
 
 ## How to use
 
