@@ -73,9 +73,9 @@ poetry add --lock conda-lock pandas fastapi uvicorn
 
 There are a few things to note:
 
-	- We will leverage the expressive syntax of the `environment.yml` file to define a new environment, particularly to specify packages that we want to install outside of `pip`, such as `cuda` or CUDA-enabled versions of packages like `pytorch`. However, by default, we still use Poetry for adding Python dependencies. For CUDA-enabled versions of packages, it is best to specify the package's exact version in `environment.yml`, and after it's installed, to add an entry with the same version specification to Poetry's `pyproject.toml` (without `^` or `~` before the version number). This will let Poetry know that the package is there and should not be upgraded.
-	- `conda-lock` is used to generate lock files for Conda dependencies, just like with poetry.lock for Poetry dependencies.
-	- `mamba` is used as a better and faster alternative to `conda` for resolving conflicts. An additional benefit is that all contributors to the project will use the same package resolver, independent from the locally-installed version of Conda.
+- We will leverage the expressive syntax of the `environment.yml` file to define a new environment, particularly to specify packages that we want to install outside of `pip`, such as `cuda` or CUDA-enabled versions of packages like `pytorch`. However, by default, we still use Poetry for adding Python dependencies. For CUDA-enabled versions of packages, it is best to specify the package's exact version in `environment.yml`, and after it's installed, to add an entry with the same version specification to Poetry's `pyproject.toml` (without `^` or `~` before the version number). This will let Poetry know that the package is there and should not be upgraded.
+- `conda-lock` is used to generate lock files for Conda dependencies, just like with poetry.lock for Poetry dependencies.
+- `mamba` is used as a better and faster alternative to `conda` for resolving conflicts. An additional benefit is that all contributors to the project will use the same package resolver, independent from the locally-installed version of Conda.
 
 ```yaml
 name: boilerplate-python
