@@ -177,7 +177,15 @@ extend-exclude = '''
 ```bash
 conda create --name boilerplate-python --file conda-linux-64.lock
 conda activate boilerplate-python
+
+# Install only dev dependencies
+poetry install --only dev
+
+# Install all dependencies, including both main and dev:
 poetry install
+
+# Install only main dependencies:
+poetry install --without dev
 ```
 
 

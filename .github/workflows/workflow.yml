@@ -1,0 +1,29 @@
+name: Run CI
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+    paths-ignore:
+      - "README.md"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install dev requirements
+        run: poetry install --only dev
+
+      - name: Check formatting
+        run: make check
+
+      - name: Run tests
+        run: make test
