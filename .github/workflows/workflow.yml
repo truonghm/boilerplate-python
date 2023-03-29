@@ -20,7 +20,7 @@ jobs:
         uses: snok/install-poetry@v1
 
       - name: Install dev requirements
-        run: poetry install --only dev
+        run: poetry install --only dev --no-root
 
       - name: Check formatting
         run: make check

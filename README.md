@@ -128,13 +128,13 @@ These dev dependencies will be installed when we run:
 
 ```bash
 # Install only dev dependencies
-poetry install --only dev
+poetry install --only dev --no-root
 
 # Install all dependencies, including both main and dev:
-poetry install
+poetry install --no-root
 
 # Install only main dependencies:
-poetry install --without dev
+poetry install --without dev --no-root
 ```
 
 Besides that, we can specify rules for formatting and testing:
@@ -179,13 +179,13 @@ conda create --name boilerplate-python --file conda-linux-64.lock
 conda activate boilerplate-python
 
 # Install only dev dependencies
-poetry install --only dev
+poetry install --only dev --no-root
 
 # Install all dependencies, including both main and dev:
-poetry install
+poetry install --no-root
 
 # Install only main dependencies:
-poetry install --without dev
+poetry install --without dev --no-root
 ```
 
 
